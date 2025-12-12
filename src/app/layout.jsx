@@ -24,8 +24,11 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Providers>
-
-        {children}
+            <div className="mx-auto max-w-screen-md min-h-screen bg-white shadow-2xl border-x border-gray-100 flex flex-col">
+            <main className="w-full">
+              {children}
+            </main>
+          </div>
         </Providers>
       </body>
     </html>
