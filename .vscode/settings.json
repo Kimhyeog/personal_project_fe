@@ -1,0 +1,32 @@
+{
+  /* --- [1. 기본 포맷팅 설정] --- */
+  // 저장할 때 자동으로 포맷팅 (Prettier 실행)
+  "editor.formatOnSave": true,
+  // 기본 포맷터로 Prettier 강제 지정 (다른 포맷터와 충돌 방지)
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  /* --- [2. 자동 수정 (Lint)] --- */
+  // 저장할 때 ESLint 규칙에 따라 코드 자동 수정 (예: 사용 안 하는 변수 정리 등)
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+
+  /* --- [3. Tailwind CSS 오류 방지] --- */
+  // globals.css에서 @tailwind, @apply 같은 키워드를 CSS 오류로 인식하지 않게 함
+  "css.validate": false,
+  "scss.validate": false,
+
+  /* --- [4. React/Javascript 개발 편의성] --- */
+  // 닫는 태그(</div>)를 자동으로 넣어줌
+  "html.autoClosingTags": true,
+  // 태그 이름을 바꾸면 닫는 태그 이름도 같이 바뀜 (<div> -> <section>)
+  "editor.linkedEditing": true,
+
+  // 파일 이동 시 경로 자동 업데이트 (파일 옮길 때 import 경로 깨짐 방지)
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  /* --- [5. 가독성] --- */
+  // 괄호 쌍을 색깔별로 다르게 표시 (코드 파악 쉬움)
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true
+}
