@@ -24,7 +24,7 @@ const Mainnav = () => {
           href={item.href}
           className={cn(
             // 기본 스타일 (회색, 호버 시 검정)
-            'text-base font-medium text-gray-900 transition-colors',
+            'md:text-md text-lg font-medium text-gray-900 transition-colors sm:text-base',
             // [핵심 로직] 현재 경로와 링크가 같으면 -> 주황색 + 밑줄 적용
             pathname === item.href && 'font-bold text-orange-500 underline underline-offset-4',
           )}
