@@ -39,7 +39,7 @@
   "editor.quickSuggestions": {
     "other": true,
     "comments": false,
-    "strings": false
+    "strings": true
   },
   // 입력 시 자동 완성 지연 시간 (ms) - 0으로 하면 즉시 나타남
   "editor.quickSuggestionsDelay": 0,
@@ -47,5 +47,22 @@
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
     "typescript": "typescriptreact"
+  },
+  "tailwindCSS.emmetCompletions": true,
+/* --- [7. JSX/JS 파일 강제 포맷팅 설정] --- */
+  "[javascript]": {
+    "editor.defaultFormatter": "prettier.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "prettier.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "prettier.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "prettier.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "prettier.prettier-vscode"
   }
 }

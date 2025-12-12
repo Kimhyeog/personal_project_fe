@@ -14,7 +14,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #f3f4f6;
+    --background: #ffffff;
     /* 모든 페이지의 배경색 지정  */
     /* #0a0a0a */
     --foreground: #000000;

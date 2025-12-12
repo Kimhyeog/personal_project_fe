@@ -1,13 +1,14 @@
-"use client"
+'use client'
 
 import { useState } from 'react'
 
-import { QueryClient , QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 
-export default function Providers({children}) {
-    
-    const [queryClient] = useState(()=>new QueryClient({
+export default function Providers({ children }) {
+  const [queryClient] = useState(
+    () =>
+      new QueryClient({
         defaultOptions: {
           queries: {
             // 데이터가 stale(상함) 상태로 변하는 시간 (1분)
@@ -18,12 +19,12 @@ export default function Providers({children}) {
             retry: 1,
           },
         },
-
-    }))
-    return (
+      }),
+  )
+  return (
     <QueryClientProvider client={queryClient}>
-        {children}
-        <ReactQueryDevtools initialIsOpen={false} />
+      {children}
+      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   )
 }
