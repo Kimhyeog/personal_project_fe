@@ -28,5 +28,24 @@
   /* --- [5. 가독성] --- */
   // 괄호 쌍을 색깔별로 다르게 표시 (코드 파악 쉬움)
   "editor.bracketPairColorization.enabled": true,
-  "editor.guides.bracketPairs": true
+  "editor.guides.bracketPairs": true,
+
+  /* --- [6. ES7+ React 스니펫 설정] --- */
+  // 스니펫(rafce 등)을 자동 완성 목록 최상단에 띄움 (필수)
+  "editor.snippetSuggestions": "top",
+  // 탭 키로 자동 완성 되도록 확실하게 설정
+  "editor.tabCompletion": "on",
+  // 자동 완성을 자동으로 띄움 (Ctrl+Space 안 눌러도 됨)
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+  // 입력 시 자동 완성 지연 시간 (ms) - 0으로 하면 즉시 나타남
+  "editor.quickSuggestionsDelay": 0,
+  // React/Next.js 환경에서 태그 자동 완성(Emmet) 활성화
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  }
 }
