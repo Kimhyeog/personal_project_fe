@@ -10,10 +10,17 @@ import SearchBar from './SearchBar'
 import Mainnav from './Mainnav'
 import { useModalStore } from '@/stores/useModalStore'
 import LoginConfirmModal from './LoginConfirmModal'
+import { usePathname } from 'next/navigation'
 
 const Header = () => {
   const { openModal } = useModalStore() // 스토어에서 'openModal' 함수 가져오기
+  const pathname = usePathname()
 
+  const hiddenRoutes = ['/login', '/signup']
+
+  if (hiddenRoutes.includes(pathname)) {
+    return null
+  }
   return (
     <>
       <header className="flex w-full items-center justify-between px-10 py-6">

@@ -12,6 +12,7 @@ const buttonVariants = cva(
         default: 'bg-black text-white hover:bg-neutral-900 shadow-sm',
         ghost: 'text-neutral-700 hover:text-black hover:bg-neutral-100',
         outline: 'border border-neutral-300 text-neutral-800 hover:bg-neutral-100',
+        outsex: 'border bg-red border-neutral-300 text-neutral-800 hover:bg-neutral-100',
       },
       size: {
         sm: 'h-8 px-3 text-sm',
