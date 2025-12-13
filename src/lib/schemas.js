@@ -3,8 +3,8 @@ import { z } from 'zod'
 
 // 1. 로그인 스키마
 export const loginSchema = z.object({
-  userId: z.string(),
-  password: z.string(),
+  userId: z.string().min(1, { message: '아이디를 입력해주세요.' }),
+  password: z.string().min(1, { message: '비밀번호를 입력하세요.' }),
 })
 
 // 2. [공통] 기본 필드 정의 (Refine 없이 객체만 정의)

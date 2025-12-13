@@ -1,7 +1,7 @@
 const loginUserApi = async (data) => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      console.log('서버로 전송된 데이터: ', data)
+      console.log('서버로 전송된 데이터', data)
       resolve({ message: '로그인 성공' })
     }, 1000)
   })
